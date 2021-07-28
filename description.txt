@@ -1,0 +1,9 @@
+SSC's Strawberry Mod is a simple content mod intended to add new content that closely matches that of vanilla Terraria, thus strawberry; a different flavor for the same treat.
+
+===VERSION 0.1===
+-Adds craftable Wooden, Boreal Wood, Palm Wood, Rich Mahogany, Shadewood, Ebonwood, and Pearlwood Spears
+-Adds craftable Copper, Tin, Silver, Tungsten, Gold, and Platinum Spears
+-Adds a crafting recipe for the Spear, allowing it to be crafted from Iron or Lead
+-Adds craftable Cactus Spear
+-Adds Bone Spear which rarely drops from Skeletons
+-Adds crafting recipes for the Bone Sword and Bone Pickaxe using a Skeleton Banner
