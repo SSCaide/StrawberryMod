@@ -86,8 +86,21 @@ namespace SSCStrawberryMod.Projectiles
 				projectile.rotation -= MathHelper.ToRadians(90f);
 			}
 
-		}
+			if (Main.rand.NextBool(3))
+			{
+				Dust dust = Dust.NewDustDirect(projectile.position, projectile.height, projectile.width, DustID.Fire, projectile.velocity.X * .2f, projectile.velocity.Y * .2f, 200, Scale: 1.2f);
+				dust.velocity += projectile.velocity * 0.3f;
+				dust.velocity *= 0.2f;
+			}
 
+			if (Main.rand.NextBool(4))
+			{
+				Dust dust = Dust.NewDustDirect(projectile.position, projectile.height, projectile.width, DustID.Fire, 0, 0, 254, Scale: 0.3f);
+				dust.velocity += projectile.velocity * 0.5f;
+				dust.velocity *= 0.5f;
+			}
+
+		}
 		public override void ModifyHitNPC(NPC target, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)
 		{
 			if (Main.rand.Next(3) == 0)

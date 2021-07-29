@@ -1,5 +1,8 @@
 SSC's Strawberry Mod is a simple content mod intended to add new content that closely matches that of vanilla Terraria, thus strawberry; a different flavor for the same treat.
 
+=0.3.1=
+-Added fire effects to the Space Prod and Imp's Pitchfork.
+
 ===VERSION 0.3===
 -Adds the Space Prod, a powerful spear crafted from Meteorite. It has a chance to light enemies on fire, and deals increased damage to burning enemies.
 -Adds the Imp's Pitchfork, a spear counterpart to the Fiery Greatsword crafted from Hellstone. It has a chance to light enemies on fire.
