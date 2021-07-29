@@ -9,7 +9,7 @@ namespace SSCStrawberryMod.NPCs.Global
     {
         public override void NPCLoot(NPC npc)
         {
-            if (Main.rand.Next(200) == 0)
+            if (Main.rand.Next(200) == 1)
             {
                 if (npc.type == NPCID.Skeleton)
                 {

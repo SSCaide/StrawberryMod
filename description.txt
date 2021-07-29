@@ -1,5 +1,10 @@
 SSC's Strawberry Mod is a simple content mod intended to add new content that closely matches that of vanilla Terraria, thus strawberry; a different flavor for the same treat.
 
+===VERSION 0.3===
+-Adds the Space Prod, a powerful spear crafted from Meteorite. It has a chance to light enemies on fire, and deals increased damage to burning enemies.
+-Adds the Imp's Pitchfork, a spear counterpart to the Fiery Greatsword crafted from Hellstone. It has a chance to light enemies on fire.
+-Minor bugfixes
+
 ===VERSION 0.2===
 -Adds the Devil's Fork, a craftable Corruption equivalent to the Crimson's "The Rotted Fork."
 -Adds a crafting recipe for The Rotted Fork.
@@ -7,9 +12,9 @@ SSC's Strawberry Mod is a simple content mod intended to add new content that cl
 -Rebalances prehardmode spears.
 
 ===VERSION 0.1===
--Adds craftable Wooden, Boreal Wood, Palm Wood, Rich Mahogany, Shadewood, Ebonwood, and Pearlwood Spears
--Adds craftable Copper, Tin, Silver, Tungsten, Gold, and Platinum Spears
--Adds a crafting recipe for the Spear, allowing it to be crafted from Iron or Lead
--Adds craftable Cactus Spear
--Adds Bone Spear which rarely drops from Skeletons
--Adds crafting recipes for the Bone Sword and Bone Pickaxe using a Skeleton Banner
+-Adds craftable Wooden, Boreal Wood, Palm Wood, Rich Mahogany, Shadewood, Ebonwood, and Pearlwood Spears.
+-Adds craftable Copper, Tin, Silver, Tungsten, Gold, and Platinum Spears.
+-Adds a crafting recipe for the Spear, allowing it to be crafted from Iron or Lead.
+-Adds craftable Cactus Spear.
+-Adds Bone Spear which rarely drops from Skeletons.
+-Adds crafting recipes for the Bone Sword and Bone Pickaxe using a Skeleton Banner.

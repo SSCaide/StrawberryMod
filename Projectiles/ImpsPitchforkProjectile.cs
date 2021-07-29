@@ -1,14 +1,15 @@
 ﻿using Microsoft.Xna.Framework;
 using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace SSCStrawberryMod.Projectiles
 {
-    public class GoldSpearProjectile : ModProjectile
+    public class ImpsPitchforkProjectile : ModProjectile
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Gold Spear");
+			DisplayName.SetDefault("Imp's Pitchfork");
 		}
 
 		public override void SetDefaults()
@@ -43,6 +44,10 @@ namespace SSCStrawberryMod.Projectiles
 			Player projOwner = Main.player[projectile.owner];
 			// Here we set some of the projectile's owner properties, such as held item and itemtime, along with projectile direction and position based on the player
 			Vector2 ownerMountedCenter = projOwner.RotatedRelativePoint(projOwner.MountedCenter, true);
+
+			Vector2 muzzleOffset = Vector2.Normalize(projectile.velocity) * 15f;
+			ownerMountedCenter += muzzleOffset;
+
 			projectile.direction = projOwner.direction;
 			projOwner.heldProj = projectile.whoAmI;
 			projOwner.itemTime = projOwner.itemAnimation;
@@ -53,7 +58,7 @@ namespace SSCStrawberryMod.Projectiles
 			{
 				if (movementFactor == 0f) // When initially thrown out, the ai0 will be 0f
 				{
-					movementFactor = .15f; // Make sure the spear moves forward when initially thrown out
+					movementFactor = 1f; // Make sure the spear moves forward when initially thrown out
 					projectile.netUpdate = true; // Make sure to netUpdate this spear
 				}
 				if (projOwner.itemAnimation < projOwner.itemAnimationMax / 2.25) // Somewhere along the item animation, make sure the spear moves back
@@ -82,5 +87,14 @@ namespace SSCStrawberryMod.Projectiles
 			}
 
 		}
+
+		public override void ModifyHitNPC(NPC target, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)
+		{
+			if (Main.rand.Next(2) == 0)
+			{
+				target.AddBuff(BuffID.OnFire, 240);
+			}
+		}
+
 	}
 }

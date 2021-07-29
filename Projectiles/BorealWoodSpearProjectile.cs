@@ -8,7 +8,7 @@ namespace SSCStrawberryMod.Projectiles
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("BorealWoodSpear");
+			DisplayName.SetDefault("Boreal Wood Spear");
 		}
 
 		public override void SetDefaults()

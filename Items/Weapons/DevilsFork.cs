@@ -21,7 +21,7 @@ namespace SSCStrawberryMod.Items.Weapons
 			item.useAnimation = 25;
 			item.useTime = 25;
 			item.shootSpeed = 2.7f;
-			item.knockBack = 6f;
+			item.knockBack = 6.5f;
 			item.width = 38;
 			item.height = 38;
 			item.scale = 1f;
