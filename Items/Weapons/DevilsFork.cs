@@ -11,12 +11,12 @@ namespace SSCStrawberryMod.Items.Weapons
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Devil's Fork");
+			DisplayName.SetDefault("The Devil's Fork");
 		}
 
 		public override void SetDefaults()
 		{
-			item.damage = 12;
+			item.damage = 13;
 			item.useStyle = ItemUseStyleID.HoldingOut;
 			item.useAnimation = 25;
 			item.useTime = 25;

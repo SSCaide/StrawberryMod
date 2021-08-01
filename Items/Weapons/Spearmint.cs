@@ -6,26 +6,25 @@ using Terraria.ModLoader;
 
 namespace SSCStrawberryMod.Items.Weapons
 {
-	public class ImpsPitchfork : ModItem
+	public class Spearmint : ModItem
 	{
 
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Imp's Pitchfork");
-			Tooltip.SetDefault("Has a chance to light struck enemies on fire.\n'The mark of a bona-fide demon!'");
+			Tooltip.SetDefault("Has a chance to poison enemies.");
 		}
 
 		public override void SetDefaults()
 		{
-			item.damage = 23;
+			item.damage = 18;
 			item.useStyle = ItemUseStyleID.HoldingOut;
-			item.useAnimation = 40;
-			item.useTime = 40;
+			item.useAnimation = 34;
+			item.useTime = 34;
 			item.shootSpeed = 2.7f;
-			item.knockBack = 7.5f;
+			item.knockBack = 5f;
 			item.width = 38;
 			item.height = 38;
-			item.scale = 1f;
+			item.scale = 1.5f;
 			item.rare = ItemRarityID.Orange;
 			item.value = Item.sellPrice(silver: 35, copper: 10);
 
@@ -35,7 +34,7 @@ namespace SSCStrawberryMod.Items.Weapons
 			item.autoReuse = false; // Most spears don't autoReuse, but it's possible when used in conjunction with CanUseItem()
 
 			item.UseSound = SoundID.Item1;
-			item.shoot = ModContent.ProjectileType<ImpsPitchforkProjectile>();
+			item.shoot = ModContent.ProjectileType<SpearmintProjectile>();
 		}
 
 		public override bool CanUseItem(Player player)
@@ -49,7 +48,8 @@ namespace SSCStrawberryMod.Items.Weapons
 		public override void AddRecipes()
         {
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.HellstoneBar, 22);
+			recipe.AddIngredient(ItemID.JungleSpores, 12);
+			recipe.AddIngredient(ItemID.Vine, 12);
 			recipe.AddTile(TileID.Anvils);
 			recipe.SetResult(this);
 			recipe.AddRecipe();

@@ -5,20 +5,20 @@ using Terraria.ModLoader;
 
 namespace SSCStrawberryMod.Projectiles
 {
-    public class SpaceProdProjectile : ModProjectile
+    public class DusksPointProjectile : ModProjectile
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Space Prod");
+			DisplayName.SetDefault("Dusk's Point");
 		}
 
 		public override void SetDefaults()
 		{
-			projectile.width = 18;
-			projectile.height = 18;
+			projectile.width = 19;
+			projectile.height = 19;
 			projectile.aiStyle = 19;
 			projectile.penetrate = -1;
-			projectile.scale = 1.3f;
+			projectile.scale = 1.35f;
 			projectile.alpha = 0;
 
 			projectile.hide = true;
@@ -45,7 +45,7 @@ namespace SSCStrawberryMod.Projectiles
 			// Here we set some of the projectile's owner properties, such as held item and itemtime, along with projectile direction and position based on the player
 			Vector2 ownerMountedCenter = projOwner.RotatedRelativePoint(projOwner.MountedCenter, true);
 
-			Vector2 muzzleOffset = Vector2.Normalize(projectile.velocity) * 8f;
+			Vector2 muzzleOffset = Vector2.Normalize(projectile.velocity) * 45f;
 			ownerMountedCenter += muzzleOffset;
 
 			projectile.direction = projOwner.direction;
@@ -88,31 +88,20 @@ namespace SSCStrawberryMod.Projectiles
 
 			if (Main.rand.NextBool(3))
 			{
-				Dust dust = Dust.NewDustDirect(projectile.position, projectile.height, projectile.width, DustID.Fire, projectile.velocity.X * .2f, projectile.velocity.Y * .2f, 200, Scale: 1.2f);
-				dust.noGravity = true;
+				Dust dust = Dust.NewDustDirect(projectile.position, projectile.height, projectile.width, DustID.Shadowflame, projectile.velocity.X * .2f, projectile.velocity.Y * .2f, 100, Scale: 1f);
+				dust.velocity += projectile.velocity * 0.5f;
+				dust.velocity *= 0.25f;
+			}
+			if (Main.rand.NextBool(3))
+			{
+				Dust dust = Dust.NewDustDirect(projectile.position, projectile.height, projectile.width, DustID.Demonite, projectile.velocity.X * .2f, projectile.velocity.Y * .2f, 200, Scale: 1f);
 				dust.velocity += projectile.velocity * 0.3f;
 				dust.velocity *= 0.2f;
 			}
 
-			if (Main.rand.NextBool(4))
-			{
-				Dust dust = Dust.NewDustDirect(projectile.position, projectile.height, projectile.width, DustID.Fire, 0, 0, 254, Scale: 0.3f);
-				dust.velocity += projectile.velocity * 0.5f;
-				dust.velocity *= 0.5f;
-			}
-
 		}
-		public override void ModifyHitNPC(NPC target, ref int damage, ref float knockback, ref bool crit, ref int hitDirection)
-		{
-			if (Main.rand.Next(3) == 0)
-			{
-				target.AddBuff(BuffID.OnFire, 180);
-			}
 
-			if (target.HasBuff(BuffID.OnFire))
-			{
-				damage += 3;
-			}
-		}
+		
+
 	}
 }

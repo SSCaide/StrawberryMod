@@ -1,4 +1,4 @@
 displayName = SSC's Strawberry Mod
 author = SirSuperCaide
-version = 0.3.1
+version = 0.4
 buildIgnore = *.csproj, *.vs

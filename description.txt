@@ -1,5 +1,13 @@
 SSC's Strawberry Mod is a simple content mod intended to add new content that closely matches that of vanilla Terraria, thus strawberry; a different flavor for the same treat.
 
+===VERSION 0.4===
+-Adds the Spearmint, a craftable spear equivalent to the Blade of Grass.
+-Adds the Tonbogiri, a spear equivalent to the Muramasa found in the Dungeon.
+-Adds the Dusk's Point, a spear equivalent to the Night's Edge crafted from the Imp's Pitchfork, the Spearmint, the Tonbogiri, and The Rotted Fork/The Devil's Fork.
+-Changes the "Devil's Fork"'s display name to "The Devil's Fork" for consistency with its vanilla Crimson equivalent, The Rotted Fork.
+-Improves the fire effects of the Imp's Pitchfork and Space Prod.
+-Balance changes.
+
 =0.3.1=
 -Added fire effects to the Space Prod and Imp's Pitchfork.
 

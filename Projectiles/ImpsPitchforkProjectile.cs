@@ -89,12 +89,14 @@ namespace SSCStrawberryMod.Projectiles
 			if (Main.rand.NextBool(3))
 			{
 				Dust dust = Dust.NewDustDirect(projectile.position, projectile.height, projectile.width, DustID.Fire, projectile.velocity.X * .2f, projectile.velocity.Y * .2f, 100, Scale: 2.8f);
+				dust.noGravity = true;
 				dust.velocity += projectile.velocity * 0.5f;
 				dust.velocity *= 0.25f;
 			}
 			if (Main.rand.NextBool(3))
 			{
 				Dust dust = Dust.NewDustDirect(projectile.position, projectile.height, projectile.width, DustID.Fire, projectile.velocity.X * .2f, projectile.velocity.Y * .2f, 200, Scale: 2.2f);
+				dust.noGravity = true;
 				dust.velocity += projectile.velocity * 0.3f;
 				dust.velocity *= 0.2f;
 			}
